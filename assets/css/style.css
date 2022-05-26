@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
 
-@font-face {
+
+
+/* @font-face {
 	font-family: "monument";
 	src: url("/assets/webfonts/MonumentExtended-Ultrabold.otf") format("otf");
-}
+} */
 
 :root{
 	--bgColor:#0B0B0B;
@@ -13,6 +16,7 @@
 	/* --shadowText: el colore de arriba pero con opacity*/
 	--tinyText: 'Poppins', sans-serif;
 	--brush:'Water Brush', cursive;
+	--mainText:'Koulen', cursive;
 }
 
 *{
@@ -46,7 +50,7 @@ main nav ul{
 	align-items: center;
 	flex-direction: column;
 	list-style: none;
-	font-family: monument;
+	font-family: var(--mainText);
 }
 main nav ul li{
 	transition: .3s ease-out;
@@ -64,8 +68,8 @@ main nav ul li a{
 main nav ul li a::after{
 	content: attr(data-number);
 	position: absolute;
-	top: -20%;
-	left: -7%;
+	top: 7%;
+	left: -10%;
 	font-size: .4rem;	
 	font-family: var(--tinyText);
 }
@@ -136,8 +140,9 @@ section{
 	margin: 1rem;
 }
 section h1{
-	font-size: 2.5rem;
-	font-family: monument;
+	font-size: 4rem;
+	line-height: 1;
+	font-family: var(--mainText);
 	font-weight: 200;
 }
 .cursiva{
@@ -185,8 +190,10 @@ aside{
 	color: var(--detailColor);
 }
 .marquee >p{
-	font-family: monument;
+	font-family: var(--mainText);
+	font-size: 1.2rem;
 	white-space: nowrap;
+	letter-spacing: 2px;
 	will-change: transform;
 	animation: horizontal 10s linear infinite;	
 }
@@ -222,6 +229,10 @@ aside{
 	font-size: .8rem;
 	text-decoration: none;
 	background-color: transparent;
+	transition: .4s ease-out;
+}
+.containerImg picture a:hover{
+	opacity: .6;
 }
 .containerImg picture a span{
 	margin-left: 1rem;
@@ -236,19 +247,19 @@ aside{
 }
 .proy,.about{
 	color: var(--textColor);
-	font-family: monument;
+	font-family: var(--mainText);
 	background: transparent;
 	opacity: .1;
 	position: absolute;
-	font-size: 3rem;
-	top:4%;
-	left: 0;
+	font-size: 5rem;
+	top:3%;
+	left: 10%;
 	z-index: 1;
 }
 .about{
-	font-size: 3.5rem;
-	top:25%;
-	left: 3%;
+	font-size: 5rem;
+	top:10%;
+	left: 15%;
 }
 
 .containerText{
@@ -385,7 +396,7 @@ footer p{
   }
 @media only screen and (min-width:560px){
 	section h1{
-		font-size: 4rem;
+		font-size: 5rem;
 	}
 	.left{
 		font-size: 1rem;
@@ -401,12 +412,12 @@ footer p{
 	}
 	.proy{
 		font-size: 4.5rem;
-		top:10%;
+		top:11%;
 		left:50%;
 		transform: translate(-50%,-50%);
 	}
 	.about{
-		font-size:3rem;
+		font-size:5rem;
 		top:30%;
 		left:50%;
 		transform: translate(-50%,-50%);
@@ -414,7 +425,7 @@ footer p{
 }
 @media only screen and (min-width:768px){
 	section h1{
-		font-size: 5rem;
+		font-size: 6rem;
 	}
 	.left{
 		font-size: 1.2rem;
@@ -432,27 +443,37 @@ footer p{
 		transform: translate(-50%,-50%);
 	}
 	.about{
-		font-size:4rem;
+		font-size:6rem;
 		top:30%;
 	}
 	.containerImg picture p{
 		font-size: 1rem;	
 	}
+	main nav ul li{
+		line-height: 5rem;
+	}
+	main nav ul li a{
+		font-size: 4rem;
+	}
+	main nav ul li a::after{
+		top: 15%;
+		left: -8%;
+		font-size: .7rem;	
+	}
 }
 @media only screen and (min-width:992px){
 	section h1{
-		font-size: 6rem;
+		font-size: 8rem;
 	}
 	main nav ul li{
-		line-height: 6rem;
+		line-height: 8rem;
 	}
 	main nav ul li a{
-		font-size: 6rem;
+		font-size: 8rem;
 	}
 	main nav ul li a::after{
-		top: 0;
+		top: 20%;
 		left: -5%;
-		font-size: .7rem;	
 	}
 	.primeraSeccion >*{
 		padding: 2px;
@@ -508,7 +529,7 @@ footer p{
 		margin-right:10rem ;
 	}
 	section h1{
-		font-size: 7rem;
+		font-size: 8rem;
 		text-align: center;
 	}
 	.left{
@@ -518,8 +539,10 @@ footer p{
 	.proy{
 		font-size: 10rem;
 		top:15%;
+		letter-spacing: 20px;
 	}
 	.about{
 		font-size:8rem;
+		letter-spacing: 20px;
 	}
 }
